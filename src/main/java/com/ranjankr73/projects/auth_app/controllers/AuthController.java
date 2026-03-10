@@ -43,6 +43,7 @@ public class AuthController {
     ){
         Tokens tokens = authService.refreshToken(refreshToken);
 
+        // Attaching the refresh token to cookie
         CookieUtil.attachRefreshToken(
                 response,
                 tokens.refreshToken(),
