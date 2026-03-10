@@ -53,6 +53,7 @@ public class AuthController {
         return ResponseEntity.ok(tokens.tokenResponse());
     }
 
+    // Logout controller
     @PostMapping("/logout")
     public ResponseEntity<Void> logout(
             @CookieValue("refreshToken") String refreshToken,
